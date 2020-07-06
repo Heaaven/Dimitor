@@ -18,4 +18,4 @@ You can find the recent version of this filterscript [here](https://github.com/H
 Thanks to
 ------------
 
-- Deuce (Deuce#4709)
+- Deuce (Idea and test)
