@@ -20,7 +20,7 @@
 
 /*================================ Dimitor ===================================*/
 
-#define DIMITOR_VERSION		0.4
+#define DIMITOR_VERSION		0.5
 
 #define	DIMITOR             30000
 #define	DIMITOR_CREATE      30001
@@ -252,7 +252,7 @@ ShowPlayerDimitor(playerid, type)
 			}
 			switch(DimitorData[d_language][playerid])
 			{
-				case DIMITOR_LANG_FR: ShowPlayerDialog(playerid, DIMITOR_SAVE, DIALOG_STYLE_INPUT, "{E788EE}DIMITOR » {D0D0D0}Sauvegarde", "Veuillez saisir un nom à cette sauvegarde.", "Valider", "Retour");
+				case DIMITOR_LANG_FR: ShowPlayerDialog(playerid, DIMITOR_SAVE, DIALOG_STYLE_INPUT, "{E788EE}DIMITOR » {D0D0D0}Sauvegarde", "Veuillez saisir un nom pour cette sauvegarde.", "Valider", "Retour");
 				case DIMITOR_LANG_EN: ShowPlayerDialog(playerid, DIMITOR_SAVE, DIALOG_STYLE_INPUT, "{E788EE}DIMITOR » {D0D0D0}Backup", "Please enter a name for this backup.", "Confirm", "Back");
 			}
 		}
@@ -315,7 +315,7 @@ Log_Dimitor(playerid, file[], string[])
 public OnFilterScriptInit()
 {
 	print("\n--------------------------");
-	print("------Dimitor Loaded------");
+	print("----- Dimitor Loaded -----");
 	print("--------------------------\n");
 	for(new i; i <= GetPlayerPoolSize(); i++)
 	{
@@ -336,7 +336,7 @@ public OnFilterScriptExit()
 		}
 	}
 	print("\n--------------------------");
-	print("-----Dimitor Unloaded-----");
+	print("---- Dimitor Unloaded ----");
 	print("--------------------------\n");
 	return 1;
 }
@@ -491,6 +491,8 @@ public OnPlayerEditAttachedObject(playerid, response, index, modelid, boneid, Fl
         ObjectData[playerid][index][d_sx] = fScaleX;
         ObjectData[playerid][index][d_sy] = fScaleY;
         ObjectData[playerid][index][d_sz] = fScaleZ;
+
+		SetPlayerAttachedObject(playerid, index, modelid, boneid, fOffsetX, fOffsetY, fOffsetZ, fRotX, fRotY, fRotZ, fScaleX, fScaleY, fScaleZ);
     }
     else
     {
