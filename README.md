@@ -13,7 +13,7 @@ Make sure you have the *scriptfiles* folder, it will be used to save the positio
 Download
 -----------
 
-You can find the recent version of this filterscript [here](https://github.com/HeavenSAMP/Dimitor/releases).
+You can find the recent version of this filterscript [here](https://github.com/Heaaven/Dimitor/releases).
 
 Thanks to
 ------------
